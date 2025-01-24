@@ -1,0 +1,24 @@
+Hi team,
+
+After reviewing the datasets, I’ve identified several data quality issues that may impact analysis. I had the chance to investigate the Fetch Rewards tables and conduct my analysis using Python and SQL in Jupyter Notebooks. Below is a summary of my findings:
+
+Duplicate Records: 
+In the user table, there are duplicate logins with the same User ID and login time. This raises concerns about potential data ingestion or logging issues.
+
+Test Data: 
+The brands table contains test data in several columns, which might skew results if not properly excluded. I’d like clarification on whether these entries are intentional.
+
+Value Mismatches: 
+In the brands table, some values in the category_code column do not align with corresponding values in the category column. This inconsistency raises questions about how these columns are related and whether one of them is incorrect or incomplete.
+
+Null Values: 
+I observed missing values across many columns, but the null values in critical fields like brand_code and brand_name in the brands table are particularly concerning, as they could significantly affect the analysis results.
+
+Unclear Fields: 
+The cpg and ref fields in the user table are not defined in the documentation or schema provided. Without clarity on their purpose, I’ve excluded them from my analysis for now.
+
+I also noticed scaling concerns. Many records, particularly in JSON files, contain embedded dictionaries (e.g., receiptRewardsItem) that require additional data wrangling. As the dataset grows, this could lead to increased preprocessing efforts and resource demands.
+To address these issues, I’ve attached my notebook and database diagram for reference. I’d like to schedule a meeting with the engineering and product teams to clarify these questions and discuss solutions for the data quality challenges. Let me know your availability to discuss this further.
+
+Best regards,
+Shangyu Dong
